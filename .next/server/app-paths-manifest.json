@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/valley/page": "app/valley/page.js",
+  "/work/page": "app/work/page.js",
+  "/pieces/page": "app/pieces/page.js",
+  "/harvest/page": "app/harvest/page.js"
+}
