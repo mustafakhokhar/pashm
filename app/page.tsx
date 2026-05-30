@@ -103,7 +103,7 @@ export default function HomePage() {
       {/* =========================================== */}
       {/* SPECS STRIP                                 */}
       {/* =========================================== */}
-      <section className="border-b border-line-soft border-t border-t-ink bg-bone px-10 py-7 max-md:px-5 max-md:py-6">
+      <section className="border-b border-t border-line-soft bg-bone px-10 py-7 max-md:px-5 max-md:py-6">
         <div className="mx-auto grid max-w-[1340px] grid-cols-[auto_1fr_1fr_1fr_1fr] items-center gap-[60px] max-md:grid-cols-2 max-md:gap-6">
           <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark max-md:col-span-2">
             {CURRENT_VINTAGE.label}
@@ -168,7 +168,7 @@ export default function HomePage() {
       {/* =========================================== */}
       <section className="px-10 py-24 max-md:px-5 max-md:py-14">
         <div className="mx-auto max-w-[1340px]">
-          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-ink pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
+          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-line-soft pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
             <div>
               <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark">
                 § III — The Work
@@ -229,7 +229,7 @@ export default function HomePage() {
       {/* =========================================== */}
       <section className="border-b border-t border-line-soft bg-bone-warm px-10 py-24 max-md:px-5 max-md:py-14">
         <div className="mx-auto max-w-[1340px]">
-          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-ink pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
+          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-line-soft pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
             <div>
               <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark">
                 § IV — Pieces
