@@ -94,7 +94,7 @@ export default async function PieceDetailPage({ params }: Props) {
               <SpecRow k="Weight" v={piece.weight} />
               <SpecRow k="Fineness" v={piece.fineness} />
               <SpecRow k="Vintage" v={piece.year} />
-              <SpecRow k="Origin" v="Ushu Valley" />
+              <SpecRow k="Origin" v="Swat Valley" />
               <SpecRow
                 k="Comb / Sort / Yarn / Loom"
                 v="Bakht Mir · Bibi Najma · Hidayat Khan · Ustad Akbar"

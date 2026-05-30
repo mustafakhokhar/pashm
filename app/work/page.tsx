@@ -23,7 +23,7 @@ const CHAPTERS = [
     brief:
       "Bakht Mir at the comb. Tight on hands and tool, fleece coming free of the goat's coat. Late April, available light.",
     body: [
-      "In late April and early May, **Bakht Mir** and his sons climb to the Ushu meadows and comb the goats by hand. We never shear.",
+      "In late April and early May, **Bakht Mir** and his sons climb to the Swat meadows and comb the goats by hand. We never shear.",
       "The fine under-down comes free from the coarser outer coat in a slow rhythm — each goat takes its own time. A single goat yields somewhere between sixty and two hundred grams of usable fibre across the season.",
     ],
     credit: "Bakht Mir · twenty-eight years",

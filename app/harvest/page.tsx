@@ -8,7 +8,7 @@ import { HARVEST } from "@/content/data";
 export const metadata: Metadata = {
   title: "Harvest",
   description:
-    "An annual record of each spring harvest in the Ushu Valley. Weather, yield, micron count, and notes from the family.",
+    "An annual record of each spring harvest in the Swat Valley. Weather, yield, micron count, and notes from the family.",
 };
 
 /**

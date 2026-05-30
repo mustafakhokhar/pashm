@@ -20,6 +20,8 @@ type Props = {
   photo?: string;
   /** Alt text — required when `photo` is set. */
   alt?: string;
+  /** Responsive `sizes` hint for the optimized image. Defaults to a hero-width hint. */
+  sizes?: string;
   /** Aspect ratio class. Defaults to 4/5 portrait. */
   aspect?: "4/5" | "3/4" | "21/9" | "16/11";
   /** Use dark variant (for placeholders inside dark sections). */
@@ -40,6 +42,7 @@ export function Fig({
   brief,
   photo,
   alt,
+  sizes,
   aspect = "4/5",
   tone = "light",
   className = "",
@@ -55,7 +58,7 @@ export function Fig({
           alt={alt ?? brief}
           fill
           className="object-cover saturate-[0.78] contrast-[0.96] brightness-[0.92] transition-transform duration-[8s] ease-[cubic-bezier(.2,.5,.2,1)] hover:scale-[1.04]"
-          sizes="(max-width: 980px) 100vw, 50vw"
+          sizes={sizes ?? "(max-width: 980px) 100vw, 50vw"}
         />
         {/* Warm tonal overlay */}
         <div

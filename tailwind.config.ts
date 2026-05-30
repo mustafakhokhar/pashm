@@ -29,6 +29,9 @@ const config: Config = {
         stone: {
           DEFAULT: "#8A847B",
           light: "#A8A299",
+          // Darker warm-grey for small labels on light surfaces. ~4.9:1 on bone
+          // (AA-readable), still clearly lighter than ink so label/value hierarchy holds.
+          dark: "#6E665B",
         },
         // Opacity variants used in borders
         line: {

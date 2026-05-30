@@ -9,7 +9,7 @@ export function UtilityBar() {
   return (
     <div className="relative z-10 flex items-center justify-between border-b border-line-soft px-10 py-[14px] text-[10px] uppercase tracking-[0.22em] text-stone max-md:px-5 max-md:py-3 max-md:text-[9px]">
       <div className="flex items-center gap-7 max-md:gap-[14px]">
-        <span>Ushu Valley</span>
+        <span>Swat Valley</span>
         <span className="text-stone-light max-md:hidden">·</span>
         <span>Upper Swat</span>
         <span className="text-stone-light max-md:hidden">·</span>

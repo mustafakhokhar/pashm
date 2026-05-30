@@ -52,14 +52,14 @@ export default function ValleyPage() {
                 gave us pashmīna.
               </p>
               <p className="mb-7">
-                The Ushu Valley sits at the eastern edge of that history. Eight kilometres of
+                The Swat Valley sits at the eastern edge of that history. Eight kilometres of
                 meadow between the snowline and the village, between two and a half and two
                 thousand eight hundred metres in elevation. The goats winter low and summer high.
                 Each spring they shed the fine under-down they grew against the cold. That window
                 — usually three weeks in late April and early May — is the entire harvest.
               </p>
               <p>
-                Our family began dispatching fleece from Ushu in{" "}
+                Our family began dispatching fleece from Swat in{" "}
                 <strong className="font-normal text-ink">1928</strong>. The trade was small at
                 first: bales sent by mule down to Mingora, then on to Peshawar, Lahore, sometimes
                 Amritsar. The fibre was anonymous in the way most raw materials are anonymous —

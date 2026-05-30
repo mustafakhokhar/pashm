@@ -15,6 +15,8 @@ import type { Route } from "next";
 type CommonProps = {
   children: ReactNode;
   tone?: "light" | "dark";
+  /** "link" = underlined text + sliding arrow (default). "solid" = filled button. */
+  variant?: "link" | "solid";
   className?: string;
 };
 
@@ -43,13 +45,24 @@ function Arrow({ tone }: { tone: "light" | "dark" }) {
   );
 }
 
-const baseClasses =
-  "inline-flex cursor-pointer items-center gap-4 border-b py-4 font-sans text-[11px] font-normal uppercase tracking-[0.26em] transition-[gap] duration-[0.55s] ease-[cubic-bezier(.7,0,.2,1)] hover:gap-6";
+const linkClasses =
+  "inline-flex cursor-pointer items-center gap-4 border-b pt-4 pb-2 font-sans text-[11px] font-normal uppercase tracking-[0.26em] transition-[gap] duration-[0.55s] ease-[cubic-bezier(.7,0,.2,1)] hover:gap-6";
+const solidClasses =
+  "inline-flex cursor-pointer items-center gap-4 px-8 py-[18px] font-sans text-[11px] font-normal uppercase tracking-[0.24em] transition-[gap,background-color] duration-[0.45s] ease-[cubic-bezier(.7,0,.2,1)] hover:gap-6";
 
 export function QuietButton(props: Props) {
-  const { children, tone = "light", className = "" } = props;
-  const toneClass = tone === "dark" ? "text-bone border-bone" : "text-ink border-ink";
-  const combined = `${baseClasses} ${toneClass} ${className}`;
+  const { children, tone = "light", variant = "link", className = "" } = props;
+  const isSolid = variant === "solid";
+  const toneClass = isSolid
+    ? tone === "dark"
+      ? "bg-bone text-ink hover:bg-bone-warm"
+      : "bg-ink text-bone hover:bg-ink-mid"
+    : tone === "dark"
+      ? "text-bone border-bone"
+      : "text-ink border-ink";
+  // On a filled button the arrow/text invert against the surface.
+  const arrowTone: "light" | "dark" = isSolid ? (tone === "dark" ? "light" : "dark") : tone;
+  const combined = `${isSolid ? solidClasses : linkClasses} ${toneClass} ${className}`;
 
   if ("href" in props && props.href !== undefined) {
     const { href, ...rest } = props as LinkProps;
@@ -57,7 +70,7 @@ export function QuietButton(props: Props) {
       // @ts-ignore — href may be a typed Route or a plain string; both are valid here
       <Link href={href} className={combined} {...rest}>
         {children}
-        <Arrow tone={tone} />
+        <Arrow tone={arrowTone} />
       </Link>
     );
   }
@@ -66,7 +79,7 @@ export function QuietButton(props: Props) {
   return (
     <button type={type} onClick={onClick} className={combined}>
       {children}
-      <Arrow tone={tone} />
+      <Arrow tone={arrowTone} />
     </button>
   );
 }

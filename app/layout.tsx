@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { hankenGrotesk, fraunces, notoNaskhArabic } from "./fonts";
-import { UtilityBar } from "@/components/UtilityBar";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ReadingProgress } from "@/components/ReadingProgress";
@@ -10,8 +9,8 @@ import "./globals.css";
 /**
  * Root layout.
  *
- * Composes the shared shell: utility bar + main nav at the top, footer at the
- * bottom, page transition wrapper around the route content.
+ * Composes the shared shell: main nav at the top, footer at the bottom, page
+ * transition wrapper around the route content.
  *
  * Metadata defined here is the default for the site; individual pages override
  * via their own `metadata` export.
@@ -20,15 +19,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://pashm.example"),
   title: {
-    default: "PASHM — Cashmere from the Ushu Valley",
+    default: "PASHM — Cashmere from the Swat Valley",
     template: "%s — PASHM",
   },
   description:
-    "Pashm combed by hand in the Ushu Valley of upper Swat. The Yousafzai family, since 1928. Fibre, yarn, and finished pieces, dispatched direct to mills, ateliers, and private households.",
+    "Pashm combed by hand in the Swat Valley. The Yousafzai family, since 1928. Fibre, yarn, and finished pieces, dispatched direct to mills, ateliers, and private households.",
   openGraph: {
-    title: "PASHM — Cashmere from the Ushu Valley",
+    title: "PASHM — Cashmere from the Swat Valley",
     description:
-      "Hand-combed pashm from the Ushu Valley of upper Swat. The Yousafzai family, since 1928.",
+      "Hand-combed pashm from the Swat Valley. The Yousafzai family, since 1928.",
     type: "website",
     locale: "en_GB",
   },
@@ -45,7 +44,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body>
         <ReadingProgress />
-        <UtilityBar />
         <Nav />
         <main>
           <PageTransition>{children}</PageTransition>

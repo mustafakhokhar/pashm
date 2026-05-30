@@ -25,7 +25,7 @@ export function Footer() {
               PASHM
             </h5>
             <p className="max-w-[42ch] font-serif text-[15px] font-light italic leading-relaxed text-bone/70">
-              Cashmere combed by hand in the Ushu Valley of upper Swat. The Yousafzai family,
+              Cashmere combed by hand in the Swat Valley. The Yousafzai family,
               since 1928. Fibre, yarn, and finished pieces, dispatched direct.
             </p>
           </div>
@@ -35,7 +35,6 @@ export function Footer() {
               The Rooms
             </h5>
             <ul className="space-y-[6px] text-[14px] leading-[1.85] text-bone/70">
-              <li><Link href="/valley" className="text-bone/70 hover:text-bone">The Valley</Link></li>
               <li><Link href="/work" className="text-bone/70 hover:text-bone">The Work</Link></li>
               <li><Link href="/pieces" className="text-bone/70 hover:text-bone">Pieces</Link></li>
               <li><Link href="/harvest" className="text-bone/70 hover:text-bone">Harvest</Link></li>
@@ -61,7 +60,7 @@ export function Footer() {
             <ul className="space-y-[6px] text-[14px] leading-[1.85] text-bone/70">
               <li>trade@pashm.example</li>
               <li>private@pashm.example</li>
-              <li>Ushu Valley · Swat · Pakistan</li>
+              <li>Swat Valley · Pakistan</li>
             </ul>
           </div>
         </div>

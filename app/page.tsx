@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SignatureMark } from "@/components/SignatureMark";
 import { Fig } from "@/components/Fig";
 import { Caption } from "@/components/Caption";
 import { Plate } from "@/components/Plate";
@@ -29,15 +28,6 @@ export default function HomePage() {
       {/* =========================================== */}
       <section className="relative border-t border-line-soft px-10 max-md:px-5">
         <div className="relative mx-auto max-w-[1340px] py-14 max-md:py-9">
-          {/* Folio rule */}
-          <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-6 border-b border-line-soft pb-9 text-[10px] font-normal uppercase tracking-ultra-wide text-ink-soft max-md:gap-3 max-md:pb-6 max-md:text-[9px] max-md:tracking-[0.2em]">
-            <div>Spring Harvest 2026</div>
-            <div className="flex items-center justify-center">
-              <SignatureMark width={56} />
-            </div>
-            <div className="justify-self-end">Yousafzai · since 1928</div>
-          </div>
-
           {/* Arabic watermark */}
           <div
             aria-hidden
@@ -47,31 +37,31 @@ export default function HomePage() {
           </div>
 
           {/* Two-column hero */}
-          <div className="grid grid-cols-[6fr_6fr] items-stretch gap-20 pt-[70px] max-md:grid-cols-1 max-md:gap-[50px] max-md:pt-10">
+          <div className="grid grid-cols-[6fr_6fr] items-stretch gap-20 max-md:grid-cols-1 max-md:gap-[50px]">
             <div className="max-md:order-first">
               <Plate>
                 <Fig
                   figId="Pl. 01"
-                  figMeta="Ushu · Spring"
-                  brief="Ushu Valley landscape — placeholder for commissioned photography."
+                  figMeta="Swat · Spring"
+                  brief="Swat Valley landscape — placeholder for commissioned photography."
                   photo="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=2400&q=85&auto=format&fit=crop"
-                  alt="Ushu Valley landscape"
+                  alt="Swat Valley landscape"
                   aspect="4/5"
                 />
               </Plate>
               <Caption
-                lhs="Ushu — above the tree line, May"
-                rhs="Pl. 01"
+                lhs="35°N · 72°E"
+                rhs="Swat Valley · 2,400 m"
               />
             </div>
 
-            <div className="flex flex-col justify-between pt-[6px]">
+            <div>
               <div>
                 {/* Top eyebrow */}
-                <div className="mb-[50px] flex items-baseline gap-[14px] max-md:mb-[30px]">
+                <div className="-mt-[5px] mb-[50px] flex items-baseline gap-[14px] max-md:mt-0 max-md:mb-[30px]">
                   <span className="h-px w-7 self-center bg-ink-soft" />
                   <span className="font-sans text-[11px] font-normal uppercase tracking-ultra-wide text-ink-soft">
-                    Pashm — from Ushu, upper Swat
+                    Pashm — hand-combed cashmere from the Swat Valley
                   </span>
                 </div>
 
@@ -94,31 +84,17 @@ export default function HomePage() {
                 </h1>
 
                 <p className="mt-11 max-w-[40ch] text-[15.5px] leading-[1.7] text-ink-soft max-md:mt-7">
-                  We comb pashm by hand in the Ushu Valley of upper Swat. Our family has
-                  done this since <span className="text-ink">1928</span>. We dispatch fibre,
-                  yarn, and finished pieces direct to mills, ateliers, and private households.
+                  We comb cashmere by hand in the Swat Valley — pashm, in its
+                  older name. We dispatch cashmere fibre,
+                  yarn, and shawls direct to mills, royal households and European maisons.
                 </p>
-              </div>
 
-              <div className="mt-14 flex items-center gap-[30px] max-md:mt-9 max-md:flex-col max-md:items-start max-md:gap-[18px]">
-                <QuietButton href="/valley">The Valley</QuietButton>
-                <span className="text-[10px] font-normal uppercase tracking-ultra-wide text-ink-soft">
-                  Vintage — Spring 2026
-                </span>
+                <div className="mt-10 max-md:mt-8">
+                  <QuietButton href="/inquire" variant="solid">
+                    Make an enquiry
+                  </QuietButton>
+                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Folio foot */}
-          <div className="mt-16 grid grid-cols-[1fr_auto_1fr] items-center gap-6 border-t border-line-soft pt-6 text-[10px] uppercase tracking-ultra-wide text-ink-soft max-md:mt-10 max-md:grid-cols-1 max-md:gap-2">
-            <div>Ushu Valley · 2,400 – 2,800 m</div>
-            <div className="text-center">
-              <span className="font-arabic text-[14px] normal-case tracking-normal text-stone">
-                پشم
-              </span>
-            </div>
-            <div className="justify-self-end max-md:justify-self-start">
-              Direct enquiries welcome
             </div>
           </div>
         </div>
@@ -129,7 +105,7 @@ export default function HomePage() {
       {/* =========================================== */}
       <section className="border-b border-line-soft border-t border-t-ink bg-bone px-10 py-7 max-md:px-5 max-md:py-6">
         <div className="mx-auto grid max-w-[1340px] grid-cols-[auto_1fr_1fr_1fr_1fr] items-center gap-[60px] max-md:grid-cols-2 max-md:gap-6">
-          <div className="text-[10px] uppercase tracking-ultra-wide text-stone max-md:col-span-2">
+          <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark max-md:col-span-2">
             {CURRENT_VINTAGE.label}
           </div>
           <SpecCell k="Fineness" v={CURRENT_VINTAGE.fineness.value} unit={CURRENT_VINTAGE.fineness.unit} />
@@ -140,42 +116,49 @@ export default function HomePage() {
       </section>
 
       {/* =========================================== */}
-      {/* STATEMENT PREVIEW                           */}
+      {/* SPECIAL NOTE                                */}
       {/* =========================================== */}
-      <section className="dot-pattern-dark overflow-hidden bg-ink px-10 py-[130px] text-bone max-md:px-5 max-md:py-[70px]">
-        <div className="relative mx-auto grid max-w-[1340px] grid-cols-[5fr_7fr] items-center gap-20 max-md:grid-cols-1 max-md:gap-9">
-          <div>
-            <Fig
-              figId="Fig. 03"
-              figMeta="Portrait · 4:5"
-              brief="Portrait of a family member in the workshop. Side-light. Hands visible."
-              aspect="4/5"
-              tone="dark"
-            />
+      <section className="dot-pattern-dark overflow-hidden bg-ink px-10 py-24 text-bone max-md:px-5 max-md:py-14">
+        <div className="relative mx-auto grid max-w-[1340px] grid-cols-[3fr_9fr] gap-[60px] max-md:grid-cols-1 max-md:gap-9">
+          {/* Side — quiet label + faded Arabic watermark */}
+          <div className="pt-[12px]">
+            <div className="text-[10px] uppercase tracking-ultra-wide text-stone-light">
+              § II — Notes from the valley
+            </div>
+            <div
+              aria-hidden
+              className="mt-[60px] select-none font-arabic text-[64px] leading-none text-bone/15 max-md:hidden"
+            >
+              پشم
+            </div>
           </div>
+
+          {/* The note */}
           <div>
-            <div className="mb-8 text-[10px] uppercase tracking-ultra-wide text-stone">
-              The Family
-            </div>
-            <h2 className="max-w-[22ch] font-sans text-[clamp(32px,3vw,48px)] font-extralight leading-[1.15] tracking-[-0.012em] text-bone">
-              Four generations from one valley. The work has carried other people's names long enough.
+            <h2 className="max-w-[22ch] font-serif text-[clamp(32px,3vw,46px)] font-light italic leading-[1.18] tracking-[-0.005em] text-bone">
+              Very little leaves the valley.
             </h2>
-            <div className="mt-8 max-w-[52ch] text-[15.5px] leading-[1.8] text-bone/70">
+            <div className="mt-7 max-w-[72ch] space-y-[16px] text-[15.5px] leading-[1.7] text-bone/70">
               <p>
-                The word <strong className="font-normal text-bone">pashm</strong> is older than
-                the word cashmere. The fibre the world knows by its European name was traded along
-                the Silk Road through the Hindu Kush long before it travelled out through Kashmir.
+                The fleece is gathered by hand, in a single short window each spring — when the
+                goats of the high pastures shed the down they grew against the winter.{" "}
+                <em className="font-serif italic text-bone">
+                  What follows is the work of many hands, and very little machinery.
+                </em>
               </p>
-              <p className="mt-[18px]">
-                Our family has combed pashm in the Ushu Valley for four generations. We dispatch
-                fibre and finished pieces under our own name now.
+              <p>
+                Pashm is the original word. Pashmīna comes from it. For generations our people
+                have combed the same pastures, sorted the same fleeces by hand, and dispatched fibre
+                and finished cloth to those who recognise the difference.
+              </p>
+              <p>
+                We accept a small number of private commissions each year, and a handful of trade
+                relationships with mills and ateliers abroad.
               </p>
             </div>
-            <div className="mt-11">
-              <QuietButton href="/valley" tone="dark">
-                Read the full story
-              </QuietButton>
-            </div>
+            <p className="mt-7 font-serif text-[19px] font-light italic text-bone/85">
+              — Mustafa
+            </p>
           </div>
         </div>
       </section>
@@ -183,12 +166,12 @@ export default function HomePage() {
       {/* =========================================== */}
       {/* WORK PREVIEW                                */}
       {/* =========================================== */}
-      <section className="px-10 py-[130px] max-md:px-5 max-md:py-[70px]">
+      <section className="px-10 py-24 max-md:px-5 max-md:py-14">
         <div className="mx-auto max-w-[1340px]">
-          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-ink pb-[50px] max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-[30px]">
+          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-ink pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
             <div>
-              <div className="text-[10px] uppercase tracking-ultra-wide text-ink-soft">
-                The Work
+              <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark">
+                § III — The Work
               </div>
             </div>
             <div>
@@ -202,12 +185,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-[60px] grid grid-cols-4 gap-6 max-md:grid-cols-2 max-md:gap-[18px]">
+          <div className="mt-12 grid grid-cols-4 gap-6 max-md:grid-cols-2 max-md:gap-[18px]">
             {[
-              { num: "i — Comb", ttl: "The Comb", figMeta: "The Comb", brief: "Bakht Mir at the comb." },
-              { num: "ii — Sort", ttl: "The Sort", figMeta: "The Sort", brief: "Hands sorting raw fleece." },
-              { num: "iii — Yarn", ttl: "The Yarn", figMeta: "The Yarn", brief: "Spinning wheel, detail." },
-              { num: "iv — Loom", ttl: "The Loom", figMeta: "The Loom", brief: "Ustad Akbar at the loom." },
+              { num: "i — Comb", ttl: "The Comb", figMeta: "The Comb", brief: "Bakht Mir at the comb.", photo: "/photography/the_comb.jpg" },
+              { num: "ii — Sort", ttl: "The Sort", figMeta: "The Sort", brief: "Hands sorting raw fleece.", photo: "/photography/the_sort.jpg" },
+              { num: "iii — Yarn", ttl: "The Yarn", figMeta: "The Yarn", brief: "Spinning wheel, detail.", photo: "/photography/the_yarn.jpg" },
+              { num: "iv — Loom", ttl: "The Loom", figMeta: "The Loom", brief: "Ustad Akbar at the loom.", photo: "/photography/the_loom.jpg" },
             ].map((stage, i) => (
               <Link
                 key={stage.num}
@@ -218,6 +201,9 @@ export default function HomePage() {
                   figId={`Fig. 0${i + 5}`}
                   figMeta={stage.figMeta}
                   brief={stage.brief}
+                  photo={stage.photo}
+                  alt={stage.brief}
+                  sizes="(max-width: 980px) 50vw, 25vw"
                   aspect="3/4"
                 />
                 <div className="mt-4">
@@ -232,7 +218,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-[60px]">
+          <div className="mt-10">
             <QuietButton href="/work">See the full sequence</QuietButton>
           </div>
         </div>
@@ -333,7 +319,7 @@ export default function HomePage() {
 function SpecCell({ k, v, unit }: { k: string; v: string; unit?: string }) {
   return (
     <div>
-      <div className="mb-2 text-[10px] uppercase tracking-widest text-stone">{k}</div>
+      <div className="mb-2 text-[10px] uppercase tracking-widest text-stone-dark">{k}</div>
       <div className="font-sans text-[22px] font-light leading-none tracking-[-0.01em] text-ink max-md:text-[17px]">
         {v}
         {unit && <span className="ml-1 text-[14px] text-ink-soft">{unit}</span>}

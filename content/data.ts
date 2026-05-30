@@ -19,7 +19,7 @@ export type Piece = {
   slug: string; // url-safe identifier — used in /pieces/[slug]
   type: PieceType;
   name: string; // e.g. "Undyed, fine"
-  vintage: string; // e.g. "Spring 2026 · Ushu · 15.2μ"
+  vintage: string; // e.g. "Spring 2026 · Swat · 15.2μ"
   year: string; // e.g. "Spring 2026"
   fineness: string; // e.g. "15.2 microns"
   dims: string; // e.g. "200 × 70 cm"
@@ -37,7 +37,7 @@ export const PIECES: Piece[] = [
     slug: "stole-undyed-fine-spring-2026",
     type: "Stole",
     name: "Undyed, fine",
-    vintage: "Spring 2026 · Ushu · 15.2μ",
+    vintage: "Spring 2026 · Swat · 15.2μ",
     year: "Spring 2026",
     fineness: "15.2 microns",
     dims: "200 × 70 cm",
@@ -54,7 +54,7 @@ export const PIECES: Piece[] = [
     slug: "shawl-natural-fawn-spring-2025",
     type: "Shawl",
     name: "Natural fawn",
-    vintage: "Spring 2025 · Ushu · 15.6μ",
+    vintage: "Spring 2025 · Swat · 15.6μ",
     year: "Spring 2025",
     fineness: "15.6 microns",
     dims: "220 × 100 cm",
@@ -71,7 +71,7 @@ export const PIECES: Piece[] = [
     slug: "muffler-dark-brown-spring-2025",
     type: "Muffler",
     name: "Natural dark brown",
-    vintage: "Spring 2025 · Ushu · 15.4μ",
+    vintage: "Spring 2025 · Swat · 15.4μ",
     year: "Spring 2025",
     fineness: "15.4 microns",
     dims: "160 × 30 cm",
@@ -88,7 +88,7 @@ export const PIECES: Piece[] = [
     slug: "scarf-cream-fine-spring-2026",
     type: "Scarf",
     name: "Cream, fine",
-    vintage: "Spring 2026 · Ushu · 15.2μ",
+    vintage: "Spring 2026 · Swat · 15.2μ",
     year: "Spring 2026",
     fineness: "15.2 microns",
     dims: "180 × 45 cm",
@@ -105,7 +105,7 @@ export const PIECES: Piece[] = [
     slug: "shawl-mineral-indigo-spring-2025",
     type: "Shawl",
     name: "Mineral indigo",
-    vintage: "Spring 2025 · Ushu · 15.6μ · dyed",
+    vintage: "Spring 2025 · Swat · 15.6μ · dyed",
     year: "Spring 2025",
     fineness: "15.6 microns",
     dims: "220 × 100 cm",
@@ -122,7 +122,7 @@ export const PIECES: Piece[] = [
     slug: "stole-charcoal-spring-2024",
     type: "Stole",
     name: "Charcoal, natural blend",
-    vintage: "Spring 2024 · Ushu · 15.8μ",
+    vintage: "Spring 2024 · Swat · 15.8μ",
     year: "Spring 2024",
     fineness: "15.8 microns",
     dims: "200 × 70 cm",
@@ -151,7 +151,7 @@ export function getAllPieceSlugs(): string[] {
 
 export type HarvestEntry = {
   year: number;
-  vintageCode: string; // e.g. "Spring 2026 · Ushu · 15.2μ"
+  vintageCode: string; // e.g. "Spring 2026 · Swat · 15.2μ"
   summary: string;
   status: "Current vintage" | "Archive" | "Forthcoming";
   // Long-form body shown on the year detail page
@@ -167,7 +167,7 @@ export const HARVEST: HarvestEntry[] = [
   },
   {
     year: 2026,
-    vintageCode: "Spring 2026 · Ushu · 15.2μ",
+    vintageCode: "Spring 2026 · Swat · 15.2μ",
     summary: "A long winter and a slow thaw. The finest spring we have measured in five years.",
     status: "Current vintage",
     body: [
@@ -179,7 +179,7 @@ export const HARVEST: HarvestEntry[] = [
   },
   {
     year: 2025,
-    vintageCode: "Spring 2025 · Ushu · 15.6μ",
+    vintageCode: "Spring 2025 · Swat · 15.6μ",
     summary: "An ordinary year. Yield ~98 kg finished. Two new mineral dyes trialled at the workshop.",
     status: "Archive",
     body: [
@@ -189,7 +189,7 @@ export const HARVEST: HarvestEntry[] = [
   },
   {
     year: 2024,
-    vintageCode: "Spring 2024 · Ushu · 15.8μ",
+    vintageCode: "Spring 2024 · Swat · 15.8μ",
     summary: "A short, warm spring. Lower yield (84 kg), but a striking natural charcoal blend.",
     status: "Archive",
     body: [
@@ -199,7 +199,7 @@ export const HARVEST: HarvestEntry[] = [
   },
   {
     year: 2023,
-    vintageCode: "Spring 2023 · Ushu · 15.4μ",
+    vintageCode: "Spring 2023 · Swat · 15.4μ",
     summary: "First year of the named-source dispatch — the family's work travelled under its own name.",
     status: "Archive",
     body: [
@@ -269,7 +269,7 @@ export const PEOPLE: Person[] = [
 // =============================================================
 
 export const CURRENT_VINTAGE = {
-  label: "Spring 2026 — Index",
+  label: "§ 2025 — FIBER",
   fineness: { value: "15.2", unit: "microns" },
   length: { value: "38 – 42", unit: "mm" },
   method: { value: "Hand-combed", unit: "" },
