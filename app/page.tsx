@@ -37,7 +37,7 @@ export default function HomePage() {
           </div>
 
           {/* Two-column hero */}
-          <div className="grid grid-cols-[6fr_6fr] items-stretch gap-20 max-md:grid-cols-1 max-md:gap-[50px]">
+          <div className="grid grid-cols-[5fr_7fr] items-stretch gap-20 max-md:grid-cols-1 max-md:gap-[50px]">
             <div className="max-md:order-first">
               <Plate>
                 <Fig
@@ -227,12 +227,12 @@ export default function HomePage() {
       {/* =========================================== */}
       {/* PIECES PREVIEW                              */}
       {/* =========================================== */}
-      <section className="border-b border-t border-line-soft bg-bone-warm px-10 py-[130px] max-md:px-5 max-md:py-[70px]">
+      <section className="border-b border-t border-line-soft bg-bone-warm px-10 py-24 max-md:px-5 max-md:py-14">
         <div className="mx-auto max-w-[1340px]">
-          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-ink pb-[50px] max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-[30px]">
+          <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-ink pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
             <div>
-              <div className="text-[10px] uppercase tracking-ultra-wide text-ink-soft">
-                Pieces
+              <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark">
+                § IV — Pieces
               </div>
             </div>
             <div>
@@ -246,13 +246,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-[60px] grid grid-cols-3 gap-8 max-md:grid-cols-1 max-md:gap-[30px]">
+          <div className="mt-12 grid grid-cols-3 gap-8 max-md:grid-cols-1 max-md:gap-[30px]">
             {previewPieces.map((piece) => (
               <PieceCard key={piece.slug} piece={piece} variant="preview" />
             ))}
           </div>
 
-          <div className="mt-[60px]">
+          <div className="mt-10">
             <QuietButton href="/pieces">See all pieces</QuietButton>
           </div>
         </div>
@@ -261,17 +261,17 @@ export default function HomePage() {
       {/* =========================================== */}
       {/* INQUIRE PREVIEW                             */}
       {/* =========================================== */}
-      <section className="dot-pattern-dark relative overflow-hidden bg-ink px-10 py-[130px] text-bone max-md:px-5 max-md:py-[70px]">
-        <div className="relative mx-auto max-w-[1340px] text-center">
+      <section className="bg-bone px-10 py-12 max-md:px-5 max-md:py-10">
+        <div className="mx-auto max-w-[1340px]">
+          <div className="dot-pattern-dark relative overflow-hidden rounded-2xl bg-ink px-10 py-14 text-center text-bone max-md:rounded-xl max-md:px-6 max-md:py-12">
           <span className="text-[11px] uppercase tracking-ultra-wide text-stone-light">
-            Direct enquiries
+            § V — Direct enquiries
           </span>
           <h2 className="mx-auto mt-[18px] max-w-[20ch] font-sans text-[clamp(34px,3.4vw,56px)] font-extralight leading-[1.08] tracking-[-0.012em]">
-            We welcome serious enquiries on Trade and Private commissions.
+            Write to us.
           </h2>
           <p className="mx-auto mt-6 max-w-[48ch] text-[15.5px] leading-[1.75] text-bone/70">
-            Replies come from the family, not a template. Five to seven working days, depending on
-            the season.
+            Every reply comes from the family, not a template — usually within a week.
           </p>
 
           <div className="mx-auto mt-14 grid max-w-[820px] grid-cols-2 gap-0 border-b border-t border-bone/20 text-left max-md:grid-cols-1">
@@ -309,6 +309,7 @@ export default function HomePage() {
                 Open Private enquiry →
               </Link>
             </div>
+          </div>
           </div>
         </div>
       </section>

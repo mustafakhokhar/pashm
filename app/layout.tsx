@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     template: "%s — PASHM",
   },
   description:
-    "Pashm combed by hand in the Swat Valley. The Yousafzai family, since 1928. Fibre, yarn, and finished pieces, dispatched direct to mills, ateliers, and private households.",
+    "Pashm combed by hand in the Swat Valley. Fibre, yarn, and finished pieces, dispatched direct to mills, ateliers, and private households.",
   openGraph: {
     title: "PASHM — Cashmere from the Swat Valley",
     description:
-      "Hand-combed pashm from the Swat Valley. The Yousafzai family, since 1928.",
+      "Hand-combed pashm from the Swat Valley.",
     type: "website",
     locale: "en_GB",
   },

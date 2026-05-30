@@ -18,7 +18,7 @@ type Props = {
 };
 
 export function PieceCard({ piece, variant = "tile" }: Props) {
-  const aspect = variant === "preview" ? "3/4" : "4/5";
+  const aspect = "4/5";
 
   return (
     <Link

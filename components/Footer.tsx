@@ -25,8 +25,7 @@ export function Footer() {
               PASHM
             </h5>
             <p className="max-w-[42ch] font-serif text-[15px] font-light italic leading-relaxed text-bone/70">
-              Cashmere combed by hand in the Swat Valley. The Yousafzai family,
-              since 1928. Fibre, yarn, and finished pieces, dispatched direct.
+              Cashmere combed by hand in the Swat Valley. Fibre, yarn, and finished pieces, dispatched direct.
             </p>
           </div>
 
