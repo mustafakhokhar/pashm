@@ -45,6 +45,7 @@ export const PIECES: Piece[] = [
     figId: "Fig. 11",
     figMeta: "Stole · Undyed fine",
     brief: "Stole on undyed paper. Natural fawn. Soft daylight.",
+    photo: "/photography/stole.jpg",
     prose: [
       "A stole woven from the spring 2026 harvest. Undyed natural fawn — the colour comes from the goats, not from us. Soft enough to fold into a pocket; warm enough for a winter evening in the mountains.",
       "This piece left the loom in October 2026. Ustad Akbar finished the fringe by hand.",
@@ -62,6 +63,7 @@ export const PIECES: Piece[] = [
     figId: "Fig. 12",
     figMeta: "Shawl · Natural fawn",
     brief: "Shawl draped over wooden chair back. Window light.",
+    photo: "/photography/shawl.jpg",
     prose: [
       "A wider, heavier shawl from the spring 2025 harvest. The fawn is the natural shade of the herd that wintered low that year — slightly warmer and deeper than 2026.",
       "Made to be worn folded over the shoulder. Generously fringed.",
@@ -79,6 +81,7 @@ export const PIECES: Piece[] = [
     figId: "Fig. 13",
     figMeta: "Muffler · Dark brown",
     brief: "Muffler folded on stone. Natural undyed dark brown.",
+    photo: "/photography/muffler.jpg",
     prose: [
       "A long, narrow muffler. The dark brown comes from a small cluster of goats Bibi Najma sorted separately — entirely undyed.",
       "Loose-woven, light, warm. Made for daily wear.",

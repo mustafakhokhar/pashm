@@ -169,7 +169,7 @@ export default function HomePage() {
       <section className="px-10 py-24 max-md:px-5 max-md:py-14">
         <div className="mx-auto max-w-[1340px]">
           <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-line-soft pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
-            <div>
+            <div className="pt-[12px]">
               <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark">
                 § III — The Work
               </div>
@@ -230,7 +230,7 @@ export default function HomePage() {
       <section className="border-b border-t border-line-soft bg-bone-warm px-10 py-24 max-md:px-5 max-md:py-14">
         <div className="mx-auto max-w-[1340px]">
           <div className="grid grid-cols-[3fr_9fr] gap-[60px] border-b border-line-soft pb-9 max-md:grid-cols-1 max-md:gap-[18px] max-md:pb-6">
-            <div>
+            <div className="pt-[12px]">
               <div className="text-[10px] uppercase tracking-ultra-wide text-stone-dark">
                 § IV — Pieces
               </div>
@@ -240,8 +240,7 @@ export default function HomePage() {
                 Shawls, stoles, scarves, and mufflers. Made to commission.
               </h2>
               <p className="mt-[22px] max-w-[50ch] text-[15.5px] leading-[1.7] text-ink-soft">
-                A small number leave the loom each year. We show what we have, and what we can
-                make. We do not list prices on the site — please write to inquire.
+                With limited annual production, each woven piece is a rare creation. Explore our current collection and bespoke possibilities. For pricing and acquisitions, please contact us directly.
               </p>
             </div>
           </div>

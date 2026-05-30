@@ -29,6 +29,9 @@ export function PieceCard({ piece, variant = "tile" }: Props) {
         figId={piece.figId}
         figMeta={piece.figMeta}
         brief={piece.brief}
+        photo={piece.photo}
+        alt={`${piece.type} — ${piece.name}`}
+        sizes="(max-width: 980px) 100vw, 33vw"
         aspect={aspect}
       />
       <div className={variant === "preview" ? "mt-[18px]" : "mt-[22px]"}>
