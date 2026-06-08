@@ -7,19 +7,20 @@ import { PEOPLE } from "@/content/data";
 export const metadata: Metadata = {
   title: "The Valley",
   description:
-    "A small valley in upper Swat, and the Yousafzai family that has worked it since 1928. The origin of PASHM cashmere.",
+    "A small valley in upper Swat, where the fibre begins — and the cashmere that has long left it unnamed. The origin of PASHM.",
 };
 
 /**
- * The Valley — the long-form origin essay.
+ * The Valley — the long-form origin essay. Truth-based: the etymological /
+ * regional origin is real; there is no fabricated family heritage.
  *
  * Structure:
  *   1. Page header
- *   2. Essay i — origin (with Fraunces drop-cap on the opening paragraph)
+ *   2. Essay i — origin (Fraunces drop-cap on the opening paragraph)
  *   3. Full-bleed image of the herd
- *   4. Essay ii — four generations
+ *   4. Essay ii — under other names
  *   5. Dark interlude — the authorship statement
- *   6. People grid — the four people credited on every certificate
+ *   6. People grid — the hands behind the work
  */
 
 export default function ValleyPage() {
@@ -27,8 +28,8 @@ export default function ValleyPage() {
     <>
       <PageHeader
         eyebrow="§ The Valley"
-        title="A small valley in upper Swat, and the family that has worked it since 1928."
-        lead="Pashm comes from one place. The story of how we came to comb it begins four generations ago, in a village above the tree line, with a man named Sher Ali."
+        title="A small valley in upper Swat, where the fibre begins."
+        lead="Pashm comes from one place. For years it has left this valley unnamed — combed by hand, sent out, and absorbed into other people's goods. This is where it begins, and why we have finally put our name to it."
       />
 
       {/* Essay i */}
@@ -59,12 +60,10 @@ export default function ValleyPage() {
                 — usually three weeks in late April and early May — is the entire harvest.
               </p>
               <p>
-                Our family began dispatching fleece from Swat in{" "}
-                <strong className="font-normal text-ink">1928</strong>. The trade was small at
-                first: bales sent by mule down to Mingora, then on to Peshawar, Lahore, sometimes
-                Amritsar. The fibre was anonymous in the way most raw materials are anonymous —
-                graded, weighed, sold, and absorbed into other people&apos;s finished goods. For
-                four generations that was simply the work.
+                For a long time, the down combed in this valley left it the way most raw materials
+                do — graded, weighed, sold, and absorbed into other people&apos;s finished goods.
+                Bales went by mule down to Mingora, then on to the cities and the mills. The fibre
+                travelled; the source stayed anonymous. That was simply how the trade worked.
               </p>
             </div>
           </div>
@@ -86,30 +85,23 @@ export default function ValleyPage() {
           <div className="grid grid-cols-[3fr_9fr] gap-20 max-md:grid-cols-1 max-md:gap-6">
             <div>
               <div className="sticky top-10 text-[10px] uppercase tracking-ultra-wide text-stone max-md:static">
-                ii — Four generations
+                ii — Under other names
               </div>
             </div>
             <div className="max-w-[60ch] text-[17px] leading-[1.85] text-ink max-md:text-[15.5px]">
               <p className="mb-7">
-                <strong className="font-normal text-ink">Haji Sher Ali Yousafzai</strong> opened
-                the family&apos;s account-book in 1928. He combed and sorted himself; his sons
-                learned alongside him. After Partition, his eldest son consolidated the operation:
-                dehairing was brought under one roof, the women of the family took charge of
-                sorting, and the trade became more organised, if no less small.
+                Our cashmere has travelled further than our name ever has. Combed here in Swat, it
+                has been finished in Italy, spun in Bangladesh, and woven into shawls that reached
+                households in the Gulf — each time under someone else&apos;s label.
               </p>
               <p className="mb-7">
-                In the 1980s, our grandfather opened correspondence with two mills abroad — one in
-                Bangladesh, one in Italy. The fibre had been travelling to them already,
-                indirectly, through dealers in Lahore and Karachi. The new arrangement was a small
-                thing in commercial terms but a significant one in principle: the first time the
-                family name had moved with the fleece.{" "}
-                <em>That fact mattered to him, and it matters to us.</em>
+                We are not bitter about that. The fibre trade has always worked this way, and the
+                work was honest.{" "}
+                <em>But there is a difference between supplying a thing and being known for it.</em>
               </p>
               <p>
-                Today the work is run by his grandsons. The combing is still done by hand, in the
-                same meadows. The yarn is still spun on the same low-tension wheels. Ustad Akbar
-                — whose father built the loom he weaves on in 1953 — still finishes a single
-                shawl on a timeline measured in seasons.
+                PASHM is us, choosing to be known. The same valley, the same hands, the same short
+                spring — sent now directly, and signed.
               </p>
             </div>
           </div>
@@ -130,24 +122,23 @@ export default function ValleyPage() {
           </div>
           <div>
             <h3 className="mb-9 max-w-[22ch] font-sans text-[clamp(32px,3vw,48px)] font-extralight leading-[1.15] tracking-[-0.012em] text-bone max-md:text-[30px]">
-              For four generations our work has carried other people&apos;s names. That ends now.
+              For years our work has carried other people&apos;s names. That ends now.
             </h3>
             <div className="max-w-[56ch] text-[16px] leading-[1.85] text-bone/75 max-md:text-[15px]">
               <p>
-                The fibre we comb has reached every continent. It has been finished in Biella and
-                Como; sold in showrooms in Paris, Milan, and Tokyo; worn by people who never knew
-                where it came from.
+                The fibre we comb has been finished in Italy, spun in Bangladesh, and woven for
+                households in the Gulf — worn by people who never knew the valley it came from.
               </p>
               <p className="mt-[22px]">
                 We are not bitter about this.{" "}
                 <em className="font-normal not-italic text-bone">
                   It is how the world has always worked the fibre trade.
                 </em>{" "}
-                But the family agrees on one thing: it is time the source had a name.
+                But we have come to one decision: it is time the source had a name.
               </p>
               <p className="mt-[22px]">
                 PASHM is that name. Everything we dispatch — fibre, yarn, finished piece — carries
-                it, alongside the year, the valley, and the names of the people who did the work.
+                it, alongside the year, the valley, and the hands that did the work.
               </p>
             </div>
           </div>
@@ -158,7 +149,7 @@ export default function ValleyPage() {
       <section className="border-t border-line-soft px-10 py-[100px] max-md:px-5 max-md:py-[50px]">
         <div className="mx-auto max-w-[1340px]">
           <h3 className="mb-[60px] max-w-[24ch] font-sans text-[clamp(32px,3vw,44px)] font-extralight leading-[1.1] tracking-[-0.012em] text-ink max-md:mb-[30px] max-md:text-[30px]">
-            The people behind every piece. Their names appear on every certificate we ship.
+            The hands behind every piece — the comber, the sorters, the spinner, the weaver.
           </h3>
           <div className="grid grid-cols-4 gap-9 max-md:grid-cols-2 max-md:gap-5">
             {PEOPLE.map((person) => (

@@ -48,7 +48,7 @@ export const PIECES: Piece[] = [
     photo: "/photography/stole.jpg",
     prose: [
       "A stole woven from the spring 2026 harvest. Undyed natural fawn — the colour comes from the goats, not from us. Soft enough to fold into a pocket; warm enough for a winter evening in the mountains.",
-      "This piece left the loom in October 2026. Ustad Akbar finished the fringe by hand.",
+      "This piece left the loom in October 2026. The fringe was finished by hand.",
     ],
   },
   {
@@ -83,7 +83,7 @@ export const PIECES: Piece[] = [
     brief: "Muffler folded on stone. Natural undyed dark brown.",
     photo: "/photography/muffler.jpg",
     prose: [
-      "A long, narrow muffler. The dark brown comes from a small cluster of goats Bibi Najma sorted separately — entirely undyed.",
+      "A long, narrow muffler. The dark brown comes from a small cluster of goats, sorted separately at the dehairing table — entirely undyed.",
       "Loose-woven, light, warm. Made for daily wear.",
     ],
   },
@@ -176,7 +176,7 @@ export const HARVEST: HarvestEntry[] = [
     body: [
       "Late April brought **a long, slow thaw**. The herd stayed in the lower pastures for an extra two weeks; the under-down was heavier and finer than any year since 2021. We measured an average of **15.2 microns** across the dehaired batch — the finest spring we have recorded in five years.",
       "Total finished yield came to approximately **110 kg**. About seventy kilos went directly to two mills we have worked with for a long time; the rest stays in the workshop for yarn and finished pieces.",
-      "This year's most striking colour came from a small cluster of goats Bibi Najma sorted separately — a dark, almost slate-grey under-down that we have kept aside, undyed, for two stoles and one shawl.",
+      "This year's most striking colour came from a small cluster of goats, sorted aside at the dehairing table — a dark, almost slate-grey under-down that we have kept undyed, for two stoles and one shawl.",
       "— A note from the family. May 2026.",
     ],
   },
@@ -197,7 +197,7 @@ export const HARVEST: HarvestEntry[] = [
     status: "Archive",
     body: [
       "A short, warm spring. The harvest closed two weeks earlier than usual and total finished yield came to only 84 kg.",
-      "The standout of the year was a natural charcoal blend that emerged from Bibi Najma's sort — one of the finest charcoals we have ever recorded, entirely undyed.",
+      "The standout of the year was a natural charcoal blend that emerged at the sort — one of the finest charcoals we have ever recorded, entirely undyed.",
     ],
   },
   {
@@ -234,36 +234,36 @@ export type Person = {
 
 export const PEOPLE: Person[] = [
   {
-    role: "Comber",
-    name: "Bakht Mir",
-    tenure: "— twenty-eight years",
+    role: "Comb",
+    name: "The comber",
+    tenure: "— by hand, each spring",
     figId: "Fig. 15",
     figMeta: "Comber",
-    brief: "Bakht Mir in three-quarter portrait. No direct gaze.",
+    brief: "Comber in three-quarter portrait. No direct gaze.",
   },
   {
     role: "Sort & dehair",
-    name: "Bibi Najma",
-    tenure: "— leads the women's side",
+    name: "The sorters",
+    tenure: "— fine down from coarse",
     figId: "Fig. 16",
     figMeta: "Sort",
-    brief: "Bibi Najma at the sorting table. Window light, hands visible.",
+    brief: "Hands at the sorting table. Window light, hands visible.",
   },
   {
     role: "Yarn",
-    name: "Hidayat Khan",
-    tenure: "— spins on a low-tension wheel",
+    name: "The spinner",
+    tenure: "— a low-tension wheel",
     figId: "Fig. 17",
     figMeta: "Spinner",
-    brief: "Hidayat Khan at the wheel. Profile, working.",
+    brief: "Hands at the wheel. Profile, working.",
   },
   {
     role: "Loom",
-    name: "Ustad Akbar",
-    tenure: "— third generation",
+    name: "The weaver",
+    tenure: "— a season at the loom",
     figId: "Fig. 18",
     figMeta: "Weaver",
-    brief: "Ustad Akbar at the loom his father built in 1953.",
+    brief: "The weaver at a traditional handloom.",
   },
 ];
 
@@ -278,3 +278,112 @@ export const CURRENT_VINTAGE = {
   method: { value: "Hand-combed", unit: "" },
   yield: { value: "~110", unit: "kg, finished" },
 };
+
+// =============================================================
+// TRADE — the supply / capability surface (drives /trade)
+//
+// This is the page meant for cold outreach: it tells a serious buyer what
+// PASHM supplies, in what form, at what spec, and how to start.
+//
+// HONEST BY DESIGN. Values below are either real (drawn from the strategy,
+// the Work page, and the Pieces data) or marked `confirm: true`. A confirmed-
+// false value renders on the page as a visible "to confirm" placeholder, so
+// nothing fabricated reaches a buyer by accident. Fill the placeholders with
+// real figures, flip `confirm` off, and the page is ready to send.
+// =============================================================
+
+export type Spec = {
+  k: string; // label, e.g. "Fineness"
+  v: string; // value, e.g. "14.8 – 15.6μ"
+  confirm?: boolean; // true = unknown; renders as a muted "to confirm" placeholder
+};
+
+export type TradeStream = {
+  key: string;
+  num: string; // "i — Fibre"
+  name: string; // "Raw & dehaired fibre"
+  audience: string; // who it's for — "For mills, spinners & processors"
+  figId: string;
+  figMeta: string;
+  brief: string;
+  photo?: string;
+  lede: string;
+  specs: Spec[];
+  cta: string; // CTA label
+};
+
+// The orientation strip beneath the header — sets scale honestly, up front.
+export const TRADE_ORIENTATION: Spec[] = [
+  { k: "Annual yield", v: "≈110 kg finished" },
+  { k: "Fineness", v: "14.8 – 15.6μ" },
+  { k: "Staple length", v: "38 – 42 mm" },
+  { k: "Harvest", v: "One spring window" },
+];
+
+export const TRADE_STREAMS: TradeStream[] = [
+  {
+    key: "fibre",
+    num: "i — Fibre",
+    name: "Raw & dehaired fibre",
+    audience: "For mills, spinners & processors",
+    figId: "Fig. 22",
+    figMeta: "Fibre · Dehaired",
+    brief: "Dehaired under-down on undyed paper. Natural fawn. Soft daylight.",
+    photo: "/photography/the_sort.jpg",
+    lede: "Hand-combed under-down, sorted and graded by hand. Dispatched raw or dehaired, by weight, in the natural shades the goats produce.",
+    specs: [
+      { k: "Form", v: "Raw (greasy), or dehaired & sorted by grade" },
+      { k: "Fineness", v: "14.8 – 15.6μ · typically 15.2μ" },
+      { k: "Staple length", v: "38 – 42 mm" },
+      { k: "Natural colours", v: "Cream, fawn, dark brown, charcoal — undyed" },
+      { k: "Processing", v: "Hand-combed, hand-dehaired (≈30% of raw weight survives)" },
+      { k: "Annual availability", v: "≈110 kg finished, from one spring harvest" },
+      { k: "Minimum lot", v: "—", confirm: true },
+      { k: "Dispatch & terms", v: "—", confirm: true },
+    ],
+    cta: "Enquire about fibre",
+  },
+  {
+    key: "yarn",
+    num: "ii — Yarn",
+    name: "Spun yarn",
+    audience: "For knitters, weavers & brands",
+    figId: "Fig. 23",
+    figMeta: "Yarn · Undyed",
+    brief: "Cones of undyed cashmere yarn. Natural cream and fawn. Window light.",
+    photo: "/photography/the_yarn.jpg",
+    lede: "Spun undyed, in natural shades. Hand-spun on a low-tension wheel today; machine-spun for buyers who need an even count at volume.",
+    specs: [
+      { k: "Spinning", v: "Hand-spun, low-tension wheel" },
+      { k: "Machine-spun", v: "—", confirm: true },
+      { k: "Count (Nm)", v: "≈8,000 m/kg — confirm exact counts", confirm: true },
+      { k: "Ply", v: "—", confirm: true },
+      { k: "Natural colours", v: "Cream, fawn, dark brown" },
+      { k: "Dye", v: "Mineral pigment, on request only (indigo, ochre)" },
+      { k: "Minimum lot", v: "—", confirm: true },
+      { k: "Lead time", v: "—", confirm: true },
+    ],
+    cta: "Enquire about yarn",
+  },
+  {
+    key: "pieces",
+    num: "iii — Pieces",
+    name: "Finished pieces",
+    audience: "For retailers & commissions",
+    figId: "Fig. 24",
+    figMeta: "Pieces · Handwoven",
+    brief: "Folded shawl on undyed paper. Natural fawn. Fringe in detail.",
+    photo: "/photography/shawl.jpg",
+    lede: "Shawls, stoles, scarves and mufflers — handwoven from our own fibre, finished by hand. In small lots for resale, or made to commission over a season.",
+    specs: [
+      { k: "Types", v: "Shawls, stoles, scarves, mufflers" },
+      { k: "Weave", v: "Handwoven; fringe finished by hand" },
+      { k: "Typical size", v: "Stole 200×70 cm · Shawl 220×100 cm" },
+      { k: "Typical weight", v: "95 – 290 g, by piece" },
+      { k: "Colours", v: "Natural undyed, or mineral indigo" },
+      { k: "Lead time", v: "A season at the loom — dates not promised" },
+      { k: "Minimum / commission", v: "—", confirm: true },
+    ],
+    cta: "Enquire about pieces",
+  },
+];

@@ -97,7 +97,7 @@ export default async function PieceDetailPage({ params }: Props) {
               <SpecRow k="Origin" v="Swat Valley" />
               <SpecRow
                 k="Comb / Sort / Yarn / Loom"
-                v="Bakht Mir · Bibi Najma · Hidayat Khan · Ustad Akbar"
+                v="Each stage done by hand"
                 small
               />
             </div>

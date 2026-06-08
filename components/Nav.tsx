@@ -23,6 +23,7 @@ import { SignatureMark } from "./SignatureMark";
  */
 
 const navItems = [
+  { href: "/trade", label: "Trade" },
   { href: "/work", label: "The Work" },
   { href: "/pieces", label: "Pieces" },
   { href: "/harvest", label: "Harvest" },
@@ -33,6 +34,7 @@ function getContextualInquire(pathname: string): { label: string; href: string }
     return { label: "Private inquiry →", href: "/inquire/private" };
   }
   if (
+    pathname.startsWith("/trade") ||
     pathname.startsWith("/work") ||
     pathname.startsWith("/valley") ||
     pathname.startsWith("/harvest")

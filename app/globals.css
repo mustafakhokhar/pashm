@@ -47,6 +47,13 @@
 }
 
 @layer components {
+  /* Shared photographic tonal grade — the single source of truth for how every
+     image on the site is colour-treated, so the whole set reads as if shot by
+     one hand. Used by components/Fig.tsx (photo mode) and the homepage hero. */
+  .photo-grade {
+    filter: saturate(0.78) contrast(0.96) brightness(0.92);
+  }
+
   /* The signature line + ellipse mark. Used inline via React component. */
   .sig-line {
     color: currentColor;

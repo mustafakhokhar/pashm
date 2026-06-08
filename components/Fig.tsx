@@ -57,7 +57,7 @@ export function Fig({
           src={photo}
           alt={alt ?? brief}
           fill
-          className="object-cover saturate-[0.78] contrast-[0.96] brightness-[0.92] transition-transform duration-[8s] ease-[cubic-bezier(.2,.5,.2,1)] hover:scale-[1.04]"
+          className="photo-grade object-cover transition-transform duration-[8s] ease-[cubic-bezier(.2,.5,.2,1)] hover:scale-[1.04]"
           sizes={sizes ?? "(max-width: 980px) 100vw, 50vw"}
         />
         {/* Warm tonal overlay */}
